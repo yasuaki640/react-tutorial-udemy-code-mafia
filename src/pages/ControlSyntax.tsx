@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const animals = ["dog", "cat", "bird"];
+const animals: string[] = ["dog", "cat", "bird"];
 
 export const ControlSyntax = () => {
   const [filterKeyword, setFilterKeyword] = useState("");
@@ -17,7 +17,10 @@ export const ControlSyntax = () => {
         {animals
           .filter((a) => a.indexOf(filterKeyword) !== -1)
           .map((a) => (
-            <li key={a}>{a}</li>
+            <li key={a}>
+              {a}
+              {a === "dog" && "⭐"}
+            </li>
           ))}
       </ul>
     </>
