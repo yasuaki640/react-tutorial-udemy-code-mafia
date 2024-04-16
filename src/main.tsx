@@ -8,7 +8,7 @@ import { EventListenerState0412_2 } from "./pages/EventListenerState0412_2.tsx";
 import { EventListenerState0412_exercise } from "./pages/EventListenerState0412_exercise.tsx";
 import { EventListenerState0412_exercise_2 } from "./pages/EventListenerState0412_exercise_2.tsx";
 import { StateComponent } from "./pages/StateComponent.tsx";
-import { ControlSyntax } from "./pages/ControlSyntax.tsx";
+import { ControlSyntax } from "./pages/ControlSyntax/ControlSyntax.tsx";
 
 const router = createBrowserRouter([
   {
