@@ -9,6 +9,7 @@ import { EventListenerState0412_exercise } from "./pages/EventListenerState0412_
 import { EventListenerState0412_exercise_2 } from "./pages/EventListenerState0412_exercise_2.tsx";
 import { StateComponent } from "./pages/StateComponent.tsx";
 import { ControlSyntax } from "./pages/ControlSyntax/ControlSyntax.tsx";
+import { ControlSyntax_2 } from "./pages/ControlSyntax/ControlSyntax_2.tsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/control-syntax",
     element: <ControlSyntax />,
+  },
+  {
+    path: "/control-syntax_2",
+    element: <ControlSyntax_2 />,
   },
 ]);
 
