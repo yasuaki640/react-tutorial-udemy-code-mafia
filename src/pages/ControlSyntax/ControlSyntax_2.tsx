@@ -1,7 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
 
-const animals: string[] = ["dog", "cat", "bird"];
-
 type Maxim = {
   id: number;
   label: string;
