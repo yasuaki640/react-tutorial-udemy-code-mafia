@@ -9,8 +9,34 @@ type Maxim = {
   checked: boolean;
 };
 
+// カスタムフックを作成
+function useMaxims(initialMaxims: Maxim[]) {
+  const [maxims, setMaxims] = useState(initialMaxims);
+  const [sum, setSum] = useState(0);
+
+  useEffect(() => {
+    const computed = maxims
+      .filter((m) => m.checked)
+      .reduce((prev, curr) => prev + curr.名言度, 0);
+    setSum(computed);
+  }, [maxims]);
+
+  const onCheckBoxChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const toggledMaxims = maxims.map((m) => {
+      const isClickedMaxim = m.id === parseInt(e.target.value);
+      return {
+        ...m,
+        checked: isClickedMaxim ? !m.checked : m.checked,
+      };
+    });
+    setMaxims(toggledMaxims);
+  };
+
+  return { maxims, sum, onCheckBoxChange };
+}
+
 export const ControlSyntax_2 = () => {
-  const [maxims, setMaxims] = useState<Maxim[]>([
+  const initialMaxims: Maxim[] = [
     { id: 1, label: "月島さんのおかげ", 名言度: 100, checked: false },
     {
       id: 2,
@@ -30,25 +56,9 @@ export const ControlSyntax_2 = () => {
       名言度: 234567890585,
       checked: false,
     },
-  ]);
+  ];
 
-  const [sum, setSum] = useState(0);
-
-  const onCheckBoxChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const toggledMaxims = maxims.map((m) => {
-      const isClickedMaxim = m.id === parseInt(e.target.value);
-      return {
-        ...m,
-        checked: isClickedMaxim ? !m.checked : m.checked,
-      };
-    });
-    setMaxims(toggledMaxims);
-
-    const calculated = toggledMaxims
-      .filter((m) => m.checked)
-      .reduce((prev, curr) => prev + curr.名言度, 0);
-    setSum(calculated);
-  };
+  const { maxims, sum, onCheckBoxChange } = useMaxims(initialMaxims);
 
   return (
     <div>
