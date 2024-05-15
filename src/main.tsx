@@ -10,6 +10,8 @@ import { EventListenerState0412_exercise_2 } from "./pages/EventListenerState041
 import { StateComponent } from "./pages/StateComponent.tsx";
 import { ControlSyntax } from "./pages/ControlSyntax/ControlSyntax.tsx";
 import { ControlSyntax_2 } from "./pages/ControlSyntax/ControlSyntax_2.tsx";
+import { ControlSyntax_3 } from "./pages/ControlSyntax/ControlSyntax_3.tsx";
+import { UseReducer } from "./pages/UseReducer.tsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
   {
     path: "/control-syntax_2",
     element: <ControlSyntax_2 />,
+  },
+  {
+    path: "/control-syntax_3",
+    element: <ControlSyntax_3 />,
+  },
+  {
+    path: "/use-reducer",
+    element: <UseReducer />,
   },
 ]);
 
