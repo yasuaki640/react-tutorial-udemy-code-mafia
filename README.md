@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# 環境設定
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 使用するソフトウェア
 
-Currently, two official plugins are available:
+- Chrome - ブラウザ
+  https://www.google.com/intl/ja/chrome/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js - JavaScript の実行環境
+  https://nodejs.org/en/
 
-## Expanding the ESLint configuration
+- VSCode - コードエディタ
+  https://code.visualstudio.com/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## おすすめの拡張機能
 
-- Configure the top-level `parserOptions` property like this:
+- Prettier - Code formatter ★
+  `esbenp.prettier-vscode`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+  様々な言語の整形を行ってくれる
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Live Server ★
+  `ritwickdey.LiveServer`
+
+  簡易的なサーバーを簡単に起動することができる
+
+- Auto Rename Tag
+  `formulahendry.auto-rename-tag`
+
+  開始タグを編集すると、閉じタグを自動的に変更してくれる
+
+- ES7+ React/Redux/React-Native
+  `dsznajder.es7-react-js-snippets`
+
+  React のスニペット(ショートカット)を使えるようにする
