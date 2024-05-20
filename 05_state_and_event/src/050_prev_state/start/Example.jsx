@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-const Example = () => {
-  
-};
+const Example = () => {};
 
 export default Example;

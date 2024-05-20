@@ -4,12 +4,12 @@ import OtherChild from "./components/OtherChild";
 export const MyContext = createContext("hello");
 
 const Example = () => {
-  return (
-    <>
-      <Child />
-      <OtherChild />
-    </>
-  );
+	return (
+		<>
+			<Child />
+			<OtherChild />
+		</>
+	);
 };
 
 export default Example;

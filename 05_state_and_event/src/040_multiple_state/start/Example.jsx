@@ -1,5 +1,3 @@
-const Example = () => {
-  
-};
+const Example = () => {};
 
 export default Example;

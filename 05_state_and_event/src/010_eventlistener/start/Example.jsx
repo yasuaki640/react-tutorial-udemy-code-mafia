@@ -1,7 +1,5 @@
 const Example = () => {
-  return (
-    <></>
-  );
+	return <></>;
 };
 
 export default Example;

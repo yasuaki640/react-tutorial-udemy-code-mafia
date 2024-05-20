@@ -6,16 +6,15 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 
 const Example = () => {
+	// console.log('example')
 
-  // console.log('example')
-  
-  return (
-    <ThemeProvider>
-      <Header />
-      <Main />
-      <Footer />
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider>
+			<Header />
+			<Main />
+			<Footer />
+		</ThemeProvider>
+	);
 };
 
 export default Example;
