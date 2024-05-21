@@ -1,19 +1,33 @@
 import { useEffect, useState } from "react";
 
 const Example = () => {
+  const [isDisp, setIsDisp] = useState(true);
+  return (
+    <>
+      {isDisp && <Timer />}
+      <button onClick={() => setIsDisp((prev) => !prev)}>toggle</button>
+    </>
+  );
+};
+
+const Timer = () => {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
-    console.log("useEffect is called");
-    window.setInterval(() => {
+    const intervalId = window.setInterval(() => {
       setTime((prev) => prev + 1);
+      console.log("interval called");
     }, 1000);
-    return () => {};
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
   }, []);
 
   useEffect(() => {
     document.title = "counter:" + time;
     window.localStorage.setItem("time-key-end", time);
+    return () => {};
   }, [time]);
 
   return (
