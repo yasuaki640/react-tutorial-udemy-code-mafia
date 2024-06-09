@@ -1,4 +1,4 @@
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useState } from "react";
 import useTimer from "./useTimer.js";
 
 const Example = () => {
