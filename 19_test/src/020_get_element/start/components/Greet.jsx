@@ -3,6 +3,7 @@ const Greet = () => {
     <div>
       <form>
         <h1>こんにちは</h1>
+        <h2>こんにちは</h2>
         <input type="radio" />
         <label htmlFor="fullname">氏名</label>
         <input id="fullname" type="text" placeholder="氏名" />
